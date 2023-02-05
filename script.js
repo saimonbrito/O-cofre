@@ -2,13 +2,19 @@
 
   function cofreFun(){
     var mudar = document.getElementById('cofre').value
-   var aparecerSenha = document.getElementById('button')
-   if(mudar.length == 50){
-    aparecerSenha.innerHTML=  aparecerSenha.innerHTML + ('Parabens Cofre Aberto ..! ' + mudar)
-   }
+      
+        if(mudar === undefined && mudar === null  && mudar === '') alert('digite um valor')
+       
+   var aparecerSenha = document.getElementById('apareces')
+   if(mudar.length === 2){
+    aparecerSenha.innerHTML=  aparecerSenha.innerHTML + ('Parabens Cofre Aberto ..! ' + mudar.value)
+    
+   }else{
 
-    aparecerSenha.innerHTML=  aparecerSenha.innerHTML + (mudar + ' senha invalida ' )
-  }
+       aparecerSenha.innerHTML=  aparecerSenha.innerHTML + (mudar.value + ' senha invalida ' )
+   }
+   
+}
  
 //incirir elgo no html : document.write('so teste ')
 

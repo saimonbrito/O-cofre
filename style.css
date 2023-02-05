@@ -31,7 +31,10 @@ h1{
 }
 
 .abrir{
-    margin-top: 10px;
+    margin: 10px 0 10px;
     text-align: center;
     
+}
+.button{
+    text-align: center;
 }
