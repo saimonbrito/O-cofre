@@ -1,12 +1,17 @@
-var mudar = document.querySelector('#mmm').value
+  var senha_secreta = 50;
 
-alert('teste de h1' + mudar )
+  function cofreFun(){
+    var mudar = document.getElementById('cofre').value
+   var aparecerSenha = document.getElementById('button')
+   if(mudar.length == 50){
+    aparecerSenha.innerHTML=  aparecerSenha.innerHTML + ('Parabens Cofre Aberto ..! ' + mudar)
+   }
 
-//console.log(mudar)
-//  const click=()=>{
-//     alert('cofre destravado')
-// }
-// //incirir elgo no html : document.write('so teste ')
+    aparecerSenha.innerHTML=  aparecerSenha.innerHTML + (mudar + ' senha invalida ' )
+  }
+ 
+//incirir elgo no html : document.write('so teste ')
+
 // mudar.addEventListener("click", (evt)=>{
 //     const el = evt.target
 //     el.classList.add('h1')
