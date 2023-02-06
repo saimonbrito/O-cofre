@@ -1,20 +1,28 @@
-  var senha_secreta = 50;
+  var senha_secreta = Math.floor(Math.random() * 1001);
 
   function cofreFun(){
     var mudar = document.getElementById('cofre').value
-      
-        if(mudar === undefined && mudar === null  && mudar === '') alert('digite um valor')
-       
    var aparecerSenha = document.getElementById('apareces')
-   if(mudar.length === 2){
-    aparecerSenha.innerHTML=  aparecerSenha.innerHTML + ('Parabens Cofre Aberto ..! ' + mudar.value)
-    
-   }else{
 
-       aparecerSenha.innerHTML=  aparecerSenha.innerHTML + (mudar.value + ' senha invalida ' )
+   if(mudar == senha_secreta){
+    
+    aparecerSenha.innerHTML=  ('Parabens Cofre Aberto ..! ' + mudar+' essa e sua senha ')
+    document.getElementById('cofre').value =""
+   }else if(mudar > senha_secreta){
+    
+    
+                aparecerSenha.innerHTML=  ('Errou.. senha invalida, tente um numero menor ' + mudar);
+                 document.getElementById('cofre').value =""
+          
+          }else if(mudar < senha_secreta){
+          
+            aparecerSenha.innerHTML=  ('Errou.. senha invalida, tente um numero maior ' + mudar);
+            document.getElementById('cofre').value =""
+          }
+        
    }
    
-}
+
  
 //incirir elgo no html : document.write('so teste ')
 
@@ -32,7 +40,7 @@
 
 //         alert(senhaSecreta +' Parabens você acertou !..')
     
-//     }else if(senha > senhaSecreta){18
+//     }else if(senha > senhaSecreta){
     
     
 //         alert('Errou.. senha invalida, tente um numero menor ')
